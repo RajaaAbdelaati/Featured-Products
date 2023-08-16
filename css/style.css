@@ -1,0 +1,189 @@
+/* Start Global Rules */
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+/* Small */
+@media(min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media(min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media(min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Global Rules */
+.product {
+  padding: 20px 0;
+}
+.product .container .title h2 {
+  width: fit-content;
+  padding: 10px 30px;
+  font-size: 20px;
+  font-weight: normal;
+  background-color: #336e7e;
+  color: #FFF;
+}
+@media (max-width: 767px) {
+  .product .container .title h2 {
+    margin: 10px auto -5px;
+  }
+}
+.product .container .parent-box {
+  display: flex;
+  flex-flow: row-reverse;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 30px;
+}
+@media (max-width: 767px) {
+  .product .container .parent-box {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.product .container .parent-box .box {
+  width: 250px;
+  max-width: 100%;
+  border: 5px solid #DDD;
+  padding: 0px 0px 10px 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+@media (max-width: 1199px) {
+  .product .container .parent-box .box {
+    flex-basis: 35%;
+  }
+}
+.product .container .parent-box .sale {
+  position: relative;
+}
+.product .container .parent-box .sale::before {
+  content: "Sale!";
+  width: 40px;
+  height: 40px;
+  background-color: orangered;
+  color: #FFF;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  left: -20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+}
+.product .container .parent-box .box img {
+  max-width: 100%;
+  border: 1px solid #FFF;
+}
+.product .container .parent-box .box h3 {
+  margin: 10px 0;
+  font-size: 17px;
+  font-weight: normal;
+  color: #676e80;
+}
+.product .container .parent-box .box > span {
+  display: block;
+  margin: 18px 0 10px 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #346f7f;
+  font-size: 17px;
+  font-weight: bold;
+}
+.product .container .parent-box .box > span span.old-price{
+  color: #888888;
+  font-weight: normal;
+  font-size: 14px;
+  text-decoration: line-through;
+}
+.product .container .parent-box .box > span span.discount {
+  color: orangered;
+  padding-left: 10px;
+  font-weight: 600;
+  font-size: 17px;
+}
+.product .container .parent-box .box > span:not(span.active)::before {
+  content: "";
+  width: 60px;
+  height: 2px;
+  background-color: #DDD;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+.product .container .parent-box .box > span:not(span.active)::after {
+  content: "";
+  width: 60px;
+  height: 2px;
+  background-color: #DDD;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+.product .container .parent-box .box span.active::before {
+  content: "";
+  width: 40px;
+  height: 2px;
+  background-color: #DDD;
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+.product .container .parent-box .box span.active::after {
+  content: "";
+  width: 40px;
+  height: 2px;
+  background-color: #DDD;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
